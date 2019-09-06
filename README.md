@@ -30,6 +30,9 @@ CREATE DATABASE users_database;
 create user 'springuser'@'%' identified by 'ThePassword';  
 grant all on users_database.* to 'springuser'@'%';
 
+## Run the application
+mvn spring-boot:run
+
 ## Useful docker commands
 ### Stop docker container
 docker stop mysql1
