@@ -34,7 +34,7 @@ grant all on users_database.* to 'springuser'@'%';
 ### Stop docker container
 docker stop mysql1
 
-### Start again same container. Keeps the ports open.
+### Start again same container. Keeps the ports open. If the image, container and MySQL configuration are all set, only this command is needed to start MySQL after stopping the server or restarting the computer.
 docker start mysql1
 
 ### Remove docker container mysql1
