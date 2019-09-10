@@ -31,7 +31,9 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> getAllUsers() {
-        return userRepository.findAll();
+      var users = userRepository.findAll();
+      users.forEach(user -> System.out.println(user.getFirstName()));
+      return users;
     }
 
     @GetMapping("/users/{id}")
