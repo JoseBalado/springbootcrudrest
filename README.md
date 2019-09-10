@@ -24,11 +24,11 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 
 ### Create the database and give Root access from outside the container
-CREATE DATABASE users_database;
+CREATE DATABASE springbootcrudrest_database;
 
 ### Create a different user from root, the one used by Spring Boot:
 create user 'springuser'@'%' identified by 'ThePassword';  
-grant all on users_database.* to 'springuser'@'%';
+grant all on springbootcrudrest_database.* to 'springuser'@'%';
 
 ## Run the application
 mvn spring-boot:run
