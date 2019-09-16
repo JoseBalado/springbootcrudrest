@@ -17,7 +17,7 @@ docker logs mysql1 2>&1 | grep GENERATED
 ### Enter the generated root password
 docker exec -it mysql1 mysql -uroot -p
 
-### Grant all privileges to root user so he can connect from outside the container
+### Grant all privileges to root user so he can connect from outside the container. Password is root.
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';  
 CREATE USER 'root'@'%' IDENTIFIED BY 'root';  
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;  
