@@ -20,7 +20,7 @@ docker exec -it mysql1 mysql -uroot -p
 ### Grant all privileges to root user so he can connect from outside the container
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'root';  
 CREATE USER 'root'@'%' IDENTIFIED BY 'root';  
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;  
+GRANT ALL PRIVILEGES ON \*.* TO 'root'@'%' WITH GRANT OPTION;  
 FLUSH PRIVILEGES;
 
 ### Create the database and give Root access from outside the container
